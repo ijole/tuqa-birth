@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عيد ميلاد تقاويز</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #8a2be2; /* بنفسجي */
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .btn {
+      padding: 15px 30px;
+      background: #fff;
+      color: #8a2be2;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: transform .3s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+    }
+    .birthday-page {
+      display: none;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.imgur.com/4AiXzf8.jpg') center/cover no-repeat;
+      padding: 20px;
+      overflow: auto;
+    }
+    .birthday-content {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .birthday-content img {
+      max-width: 100px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="centered" id="main-page">
+    <button class="btn" onclick="showBirthday()">اضغط هنا</button>
+  </div>
+
+  <div class="birthday-page" id="birthday-page">
+    <div class="birthday-content">
+      <h1>كل عام وانتِ بخييير تقاويز!</h1>
+      <p>
+        🎉 2006/7/17 ولدت تقاويز البالغة من العمر ١٩ سنه <br>
+        حتى تصير ثيدلانية ناجحة وتسال الناس عن ارائهم بشخصيات سورية معينة <br>
+        اذا خلصت افكاراها: <br>
+        كلعام وانت بخير وبالتوفيق بحياتتتتججججج يا من افضل الاصدقاء الي مروا عليه
+      </p>
+      <p><em>By: m7md (i74l5)</em></p>
+      <div class="cats">
+        <img src="https://placekitten.com/120/120" alt="قطة 1">
+        <img src="https://placekitten.com/121/121" alt="قطة 2">
+        <img src="https://placekitten.com/122/122" alt="قطة 3">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showBirthday() {
+      document.getElementById('main-page').style.display = 'none';
+      const page = document.getElementById('birthday-page');
+      page.style.display = 'block';
+      page.animate([
+        { opacity: 0 },
+        { opacity: 1 }
+      ], { duration: 1000 });
+    }
+  </script>
+</body>
+</html>
